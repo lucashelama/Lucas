@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <th>Produtos</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Preco total</th>
+        </tr>
+        <tr>
+            <td>ProdutoA</td>
+            <td><input onmouseleave ="pr1()" type="number" id="n1"></input></td>
+            <td><div id="d1">20</div></td>
+            <td><div id="r1"></div></td>
+        </tr>
+        <tr>
+            <td>ProdutoB</td>
+            <td><input onmouseleave ="pr2()" type="number" id="n2"></input></td>
+            <td><div id="d2">30</div></td>
+            <td><div id="r2"></div></td>
+        </tr>
+    </table>
+        <button id="fim" onclick="total()" type="button">TOTAL</button>
+
+        
+
+    <script>
+        
+            var pA = document.querySelector('#d1');
+            pA = 20
+            var pB = document.querySelector('#d2');
+            pB = 30
+
+            
+            var n1 = document.querySelector('#n1');
+            var n2 = document.querySelector('#n2');
+            
+            
+            var resultado1 = document.querySelector ('#r1');
+            var resultado2 = document.querySelector ('#r2');
+
+            var final = document.querySelector ('#fim');
+
+            function pr1 () {
+           resultado1.innerHTML = (pA) * parseInt(n1.value)
+        }
+            function pr2 () {
+           resultado2.innerHTML = (pB) * parseInt(n2.value)
+        }   
+            function total () {
+            
+                final.innerHTML = resultado1 + resultado2
+
+            }
+           
+           
+        </script>
+
+</body>
+</html>
